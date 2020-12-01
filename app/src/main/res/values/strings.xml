@@ -1,0 +1,27 @@
+<resources>
+    <!--Login-->
+    <string name="app_name">B-Safe</string>
+    <string name="login_welcome">Welcome to B-Safe!</string>
+    <string name="login_subwelcome">Please login to access the app</string>
+    <string name="login_pic_desc">This is a placeholder image. Please change the image and this description when the final version\'s coding started</string>
+    <string name="login_email">Email:</string>
+    <string name="login_password">Password:</string>
+    <string name="login_button">Log In</string>
+    <string name="login_signup_1">Don\'t have an account yet?</string>
+    <string name="login_signup_2">Sign up here</string>
+    <!--Register-->
+    <string name="register_welcome">First time using B-Safe?</string>
+    <string name="register_subwelcome">Register now to start using this app</string>
+    <string name="register_email">Email:</string>
+    <string name="register_password">Password:</string>
+    <string name="register_name">Full Name:</string>
+    <string name="register_phone">Phone Number:</string>
+    <string name="register_gender">Gender:</string>
+    <string name="register_gender_male">Male</string>
+    <string name="register_gender_female">Female</string>
+    <string name="register_agreement">I agree with all the terms and conditions applied in this register.</string>
+    <string name="register_button">Register</string>
+    <string name="register_login_1">Already have an account?</string>
+    <string name="register_login_2">Log in here</string>
+    <!--Main Menu-->
+</resources>
