@@ -23,5 +23,11 @@
     <string name="register_button">Register</string>
     <string name="register_login_1">Already have an account?</string>
     <string name="register_login_2">Log in here</string>
+
     <!--Main Menu-->
+    <!--Main Menu - Fragment A: News -->
+    <string name="placeholder">This is news section</string>
+    <!--Main Menu - Fragment B: Evac tips -->
+    <string name="placeholder2">This is tips section</string>
+
 </resources>
