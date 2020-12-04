@@ -10,6 +10,11 @@ import android.view.ViewGroup;
 
 
 public class MainActivityFragmentEvacTips extends Fragment {
+
+    public MainActivityFragmentEvacTips() {
+        // Required empty public constructor
+    }
+
     /**
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,11 +24,6 @@ public class MainActivityFragmentEvacTips extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    public MainActivityFragmentEvacTips() {
-        // Required empty public constructor
-    }
-
 
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

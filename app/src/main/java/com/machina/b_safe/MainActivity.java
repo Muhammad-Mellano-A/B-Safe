@@ -7,6 +7,7 @@ import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbars = findViewById(R.id.main_menu_toolbar);
         setSupportActionBar(toolbars);
 
+
         TabLayout tab_layouts = findViewById(R.id.main_menu_tab_layout);
         tab_layouts.addTab(tab_layouts.newTab().setText("Berita"));
         tab_layouts.addTab(tab_layouts.newTab().setText("Tips Evakuasi"));
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tab_layouts.getTabCount());
         pagers.setAdapter(adapter);
         pagers.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab_layouts));
-        tab_layouts.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
+        tab_layouts.addOnTabSelectedListener(new BaseOnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 pagers.setCurrentItem(tab.getPosition());
