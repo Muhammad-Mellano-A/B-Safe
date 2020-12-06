@@ -34,5 +34,10 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_below="@id/main_menu_tab_layout"/>
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/log_out"/>
 
 </RelativeLayout>
