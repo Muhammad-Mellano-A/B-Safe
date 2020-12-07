@@ -7,16 +7,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayout.BaseOnTabSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,16 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-        btn_logout = (Button) findViewById(R.id.button_logout);
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                logout();
-            }
-        });
 
         androidx.appcompat.widget.Toolbar toolbars = findViewById(R.id.main_menu_toolbar);
         setSupportActionBar(toolbars);
@@ -80,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /* Discarded. No need for regular button
     private void logout() {
         sharedpreferences = getSharedPreferences(
                 LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
@@ -94,6 +82,28 @@ public class MainActivity extends AppCompatActivity {
 
         intent = new Intent(MainActivity.this, LoginActivity.class);
         finish();
-        startActivity(intent);
+    }
+     */
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        sharedpreferences = getSharedPreferences(
+                LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean(LoginActivity.session_status, false);
+        editor.putString(LoginActivity.TAG_ID, null);
+        editor.putString(LoginActivity.TAG_EMAIL, null);
+        editor.putString(LoginActivity.TAG_NAME, null);
+        editor.putString(LoginActivity.TAG_PHONE, null);
+        editor.commit();
+
+        switch (item.getItemId()){
+            case R.id.sign_out:
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
